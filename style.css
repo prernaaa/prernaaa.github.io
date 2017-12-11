@@ -1,0 +1,97 @@
+/*--BODY--*/
+
+body {
+	background: #ddd url(https://images.unsplash.com/photo-1481278403982-f2d9f387cdcc?auto=format&fit=crop&w=1950&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) fixed no-repeat center;
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*--HEADER--*/
+
+#header {
+	width: 100%;
+	margin: -1%;
+	padding: 40px;
+	background: #111;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	position: fixed;
+}
+
+/*--TITLE--*/
+
+#title {
+	font-size: 35px;
+	letter-spacing: 10px;
+	cursor: help;
+	transition: 0.4s;
+}
+
+#title:hover {
+	letter-spacing: 15px;
+	transition: 0.4s;
+}
+
+/*--ABOUT--*/
+
+.dropdown a {
+display: inline;
+}
+ 
+.show_hide {
+    display:none;
+}
+
+#about {
+	margin-top: 20px;
+	font-size: 10px;
+	letter-spacing: 3px;
+}
+
+/*--LINKS--*/
+
+#links {
+	position: fixed;
+	width: 100%;
+	margin: 13% 0 0 0;
+	text-align: center;
+	font-size: 13px;
+	letter-spacing: 5px;
+}
+
+#links ul, li {
+	list-style: none;
+}
+
+#links a {
+	width: 13%;
+	border: solid #111 6px;
+	display: inline-block;
+	padding: 20px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	background: #111;
+	color: #fff;
+	transition: 0.4s;
+}
+
+#links a:hover {
+	color: #111;
+	background: #fff;
+	letter-spacing: 3px;
+	transition: 0.4s;
+}
+
+
+
+
+
+
+
+
+
