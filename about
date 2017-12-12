@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<title>Prerna Awasthi</title>
+<head>
+
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway|Varela" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+
+	<!--SLIDE DOWN ABOUT-->
+
+	<script>
+		$(document).ready(function(){
+		 
+		   $(".slidingDiv").hide();
+		   $(".show_hide").show();
+		 
+		   $('.show_hide').toggle(function(){
+		       $(".slidingDiv").slideDown(
+		         function(){
+		           $("#navigation").text("navigation")
+		         }
+		       );
+		   },function(){
+		       $(".slidingDiv").slideUp(
+		       function(){
+		           $("#navigation").text("navigation")
+		       }
+		       );
+		   });
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div id="header">
+
+		<div class="dropdown">
+ 
+			<a href="#" class="show_hide"><div id="title">Prerna Awasthi</div></a>
+			 
+			<div class="slidingDiv"><div></div>
+			 
+			<div id="about">
+				Computer Science + Linguistics student at the Univeristy of Illinois at Urbana-Champaign
+			</div>
+		 
+		</div></div>
+		
+	</div>
+
+	<div id="container">
+
+		<div id="more">
+
+			COMING SOON
+
+		</div>
+
+	</div>
+
+</body>
+</html>
