@@ -90,10 +90,6 @@ display: inline;
 	transition: 0.4s;
 }
 
-#links li:last-of-type {
-	font-size: 8px;
-}
-
 /*--MORE ABOUT ME--*/
 
 #more {
