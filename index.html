@@ -9,28 +9,31 @@
 	<link rel="icon" type="image/png" href="https://i.imgur.com/eRhO6FF.jpg">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+
+	<!--SLIDE DOWN ABOUT-->
 
 	<script>
-	$(document).ready(function(){
-	 
-	   $(".slidingDiv").hide();
-	   $(".show_hide").show();
-	 
-	   $('.show_hide').toggle(function(){
-	       $(".slidingDiv").slideDown(
-	         function(){
-	           $("#navigation").text("navigation")
-	         }
-	       );
-	   },function(){
-	       $(".slidingDiv").slideUp(
-	       function(){
-	           $("#navigation").text("navigation")
-	       }
-	       );
-	   });
-	});
+		$(document).ready(function(){
+		 
+		   $(".slidingDiv").hide();
+		   $(".show_hide").show();
+		 
+		   $('.show_hide').toggle(function(){
+		       $(".slidingDiv").slideDown(
+		         function(){
+		           $("#navigation").text("navigation")
+		         }
+		       );
+		   },function(){
+		       $(".slidingDiv").slideUp(
+		       function(){
+		           $("#navigation").text("navigation")
+		       }
+		       );
+		   });
+		});
 	</script>
 
 </head>
@@ -59,8 +62,8 @@
 				<li><a href="https://www.linkedin.com/in/prerna-awasthi/">LinkedIn</a></li>
 				<li><a href="https://github.com/prernaaa">Github</a></li>
 				<li><a href="mailto:prerna.awasthi@gmail.com">Email</a></li>
-				<li><a href="">Resume</a></li>
-				<li><a href="/about" style="font-size: 8px;">+More About Me</a></li>
+				<li><a href="/resume">Resume</a></li>
+				<li><a href="/about">+More About Me</a></li>
 			</ul>
 		</div>
 
