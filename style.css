@@ -103,3 +103,15 @@ display: inline;
 	width: 50%;
 	margin-left: 25%;
 }
+
+#home {
+	margin-top: 20%;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+#home a {
+	color: #fff;
+}
