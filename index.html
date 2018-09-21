@@ -4,12 +4,13 @@
 <head>
 
 	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway|Varela" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="https://i.imgur.com/eRhO6FF.jpg">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" 
+		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" 
+		crossorigin="anonymous">
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111085678-1"></script>
@@ -22,61 +23,129 @@
 	</script>
 
 
-
-	<!--SLIDE DOWN ABOUT-->
+	<!--SMOOTH SCROLL-->
 
 	<script>
-		$(document).ready(function(){
-		 
-		   $(".slidingDiv").hide();
-		   $(".show_hide").show();
-		 
-		   $('.show_hide').toggle(function(){
-		       $(".slidingDiv").slideDown(
-		         function(){
-		           $("#navigation").text("navigation")
-		         }
-		       );
-		   },function(){
-		       $(".slidingDiv").slideUp(
-		       function(){
-		           $("#navigation").text("navigation")
-		       }
-		       );
-		   });
-		});
+	$(document).ready(function(){
+	  $('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+	    var target = this.hash,
+	    $target = $(target);
+	    $('html, body').stop().animate({
+	      'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	      window.location.hash = target;
+	    });
+	  });
+	});
+	</script>
+	
+	<!--SCROLL TO TOP-->
+	
+	<script>
+	$(document).ready(function() {
+   	  $('.toTop').hide();
+	 });
+	$(document).scroll(function() {
+	  var y = $(this).scrollTop();
+	  if (y > 750 && y < 1700) {
+	    $('.toTop').fadeIn();
+	  } else {
+	    $('.toTop').fadeOut();
+	  }
+	});
 	</script>
 
 </head>
 <body>
 
-	<div id="header">
+	<div id="home">
 
-		<div class="dropdown">
- 
-			<a href="#" class="show_hide"><div id="title">Prerna Awasthi</div></a>
-			 
-			<div class="slidingDiv"><div></div>
-			 
-			<div id="about">
-				Computer Science + Linguistics student at the Univeristy of Illinois at Urbana-Champaign
-			</div>
-		 
-		</div></div>
-		
-	</div>
-
-	<div id="container">
+		<p class="line-1 anim-typewriter"> > Prerna Awasthi.</p>
 
 		<div id="links">
-			<ul>
-				<li><a href="https://www.linkedin.com/in/prerna-awasthi/ target="_blank">LinkedIn</a></li>
-				<li><a href="https://github.com/prernaaa" target="_blank">Github</a></li>
-				<li><a href="mailto:prerna.awasthi@gmail.com" target="_blank">Email</a></li>
-				<li><a href="/resume.pdf" target="_blank">Resume</a></li>
-				<li><a href="/about" target="_blank">+More About Me</a></li>
-			</ul>
+			<!--<nav class="cl-effect-1">-->
+				<i class="fas fa-pencil-alt"></i> <a href="#about">about</a>
+				<i class="fas fa-code"></i> <a href="#portfolio">portfolio</a>
+				<i class="fas fa-chevron-circle-down"></i> <a href="#footer">more</a>
+			<!--</nav>-->
 		</div>
+
+		<div class="toTop">
+			<i class="fas fa-arrow-up"></i> <a href="#home">scroll to top</a>
+		</div>
+
+	</div>
+
+	<div id="about">
+
+		<div id="abouttitle"> > About Me.</div>
+
+		<div class="image"><img src="https://i.imgur.com/iBhufCO.jpg?1"></div>
+
+		<div id ="aboutme"> 
+
+			Hi! My name is Prerna Awasthi and I'm from New York City, but I was born in 
+			<br>
+			Singapore and have also lived in Hong Kong and Salt Lake City.
+
+			<p>
+
+			I'm currently a sophomore at the University of Illinois at Urbana-Champaign, 
+			<br>
+			majoring in Computer Science + Linguistics, and potentially minoring in Informatics.
+
+			<p>
+
+			I've been programming on and off since I was a little kindergartener trying out
+			<br>
+			Logo; I got into web development late in middle school and participated in Girls 
+			<br>
+			Who Code in high school, which was ultimately what made me decide to major in CS, 
+			<br>
+			and here I am!
+
+			<p><br>
+
+			<p class="skillstitle">HTML</p>
+			<div class="container">
+			  <div class="skills html">85%</div>
+			</div>
+
+			<p class="skillstitle">CSS</p>
+			<div class="container">
+			  <div class="skills css">90%</div>
+			</div>
+
+			<p class="skillstitle">Python</p>
+			<div class="container">
+			  <div class="skills python">70%</div>
+			</div>
+
+			<p class="skillstitle">Java</p>
+			<div class="container">
+			  <div class="skills java">60%</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="portfolio">
+	
+
+		<div id="social">
+			<a href="https://www.linkedin.com/in/prerna-awasthi/" title="linkedin"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/prernaaa" title="github"><i class="fab fa-github-square"></i></a>
+			<a href="mailto:prerna.awasthi@gmail.com" title="email"><i class="fas fa-envelope-square"></i></a>
+		</div>
+
+	</div>
+
+	<div id="footer">
+		
+		<div class="copy"><i class="far fa-copyright"></i> Prerna Awasthi 2018</div>
 
 	</div>
 
