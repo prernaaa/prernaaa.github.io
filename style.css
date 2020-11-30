@@ -63,17 +63,18 @@ body {
 .underconstruction {
 	display: flex;
 	justify-content: center;
-	margin-top: 25%;
+	margin-top: 40vh;
 	align-items: center;
 }
 
 .underconstruction h1 {
-	font-size: 2em;
+	font-size: 1.8em;
 	letter-spacing: 0.25em;
 	font-weight: 900;
 }
 
 .underconstructiontext {
+	margin-top: 1vh;
 	font-size: 1.25em;
 	font-weight: 400;
 	letter-spacing: 0.15em;
