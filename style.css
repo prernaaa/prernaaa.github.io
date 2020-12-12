@@ -143,6 +143,41 @@ nav {
 	filter: drop-shadow(0px 7px 7px grey);
 }
 
+
+/*---OPP SLIDE IN---*/
+
+.introalt-text {
+	animation: slideR 2s ease;
+}
+
+.introalt-text h1 {
+	font-size: 25px;
+}
+
+.introalt-text p {
+	letter-spacing: 0.75px;
+	max-width: 450px;
+}
+
+.introalt-text b {
+	font-weight: 400;
+	color: #723d46;
+}
+
+.introalt-image {
+	animation: slideL 2s ease;
+	height: 50vh;
+	flex: 1;
+}
+
+.introalt-image img { 
+	pointer-events: none;
+	height: 100%;
+	filter: drop-shadow(0px 7px 7px grey);
+}
+
+/*---SLIDE---*/
+
 @keyframes slideL {
 	0% {
 		opacity: 0;
