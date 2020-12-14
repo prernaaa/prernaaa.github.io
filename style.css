@@ -222,12 +222,6 @@ nav {
 /*MEDIA QUERY*/
 
 @media screen and (max-width: 600px) {
-	.all2 {
-		width: 75%;
-	}
-	.all2 img {
-		margin-bottom: 40px;
-	}
 	.column {
 		flex: 100%;
 		max-width: 100%;
@@ -237,9 +231,9 @@ nav {
 		margin: 0;
 		padding: 0;
 	}
-	.row:last-of-type {
-		margin-bottom: 40px;
-	}
+	.row:last-of-type {margin-bottom: 40px;}
+	.all2 {width: 75%; font-size: 15px;}
+	.all2 img {margin-bottom: 40px;}
 }
 
 /*WORK TEXT*/
@@ -352,36 +346,26 @@ footer a:hover {
 	margin: 0.5% 0 1% 0;
 }
 
-/*---MEDIA QUERIES---*/
+/*---MEDIA QUERIES FOR MAIN---*/
 
 @media screen and (max-width: 567px) {
 	.all {
 		flex-direction: column;
 		margin-top: 70px;
-		text-align: center;
 	}
-
-	.intro-text {
-		margin-bottom: 75px;
-	}
-
-	.intro-text h1 {
-		font-size: 18px;
-	}
-
-	.intro-text p {
-		font-size: 15px;
-	}
-
-	.intro-image img {
-		height: 80%;
-	}
+	.intro-text {margin-bottom: 75px;}
+	.intro-text h1 {font-size: 18px;}
+	.intro-text p {font-size: 15px;}
+	.intro-image img {height: 80%;}
+	.introalt-text {margin-bottom: 75px;}
+	.introalt-text h1 {font-size: 18px;}
+	.introalt-text p {font-size: 15px;}
+	.introalt-image img {height: 80%;}
 }
 
 @media screen and (max-width: 700px) {
-	.intro-text h1 {
-		font-size: 20px;
-	}
+	.intro-text h1 {font-size: 20px;}
+	.introalt-text h1 {font-size: 20px;}
 }
 
 @media screen and (max-width: 650px) and (min-height: 1000px) {
@@ -389,48 +373,37 @@ footer a:hover {
 		flex-direction: column;
 		padding-top: 175px;
 	}
-
-	.intro-text {
-		font-size: 20px;
+	.all2 {
+		flex-direction: column;
+		padding-top: 175px;
 	}
-
-	.intro-text h1 {
-		font-size: 20px;
-	}
-
-	.intro-image img {
-		height: 50%;
-	}
+	.intro-text {font-size: 20px;}
+	.intro-text h1 {font-size: 20px;}
+	.intro-image img {height: 50%;}
+	.introalt-text {font-size: 20px;}
+	.introalt-text h1 {font-size: 20px;}
+	.introalt-image img {height: 50%;}
 }
 
 @media screen and (min-width: 2500px) {
-	header {
-		font-size: 40px;
-	}
-
 	.logo a {
 		font-size: 40px;
 		border-width: 7px;
 		padding: 8px;
 	}
-
-	.introduction {
-		font-size: 40px;
-	}
-
-	.intro-text h1 {
-		font-size: 45px;
-	}
-
-	.intro-text p {
-		max-width: 750px;
-	}
-
-	footer {
-		font-size: 45px;
-	}
-
-	footer a {
-		padding: 20px;
-	}
+	header {font-size: 40px;}
+	.introduction {font-size: 40px;}
+	.intro-text h1 {font-size: 45px;}
+	.intro-text p {max-width: 750px;}
+	.introalt-text {font-size: 30px;}
+	.introalt-text h1 {font-size: 45px;}
+	.introalt-text p {max-width: 800px;}
+	.all2 {font-size: 40px;}
+	.workdetail-text h1 {font-size: 45px;}
+	.workdetail-text h4 {font-size: 40px;}
+	.workdetail-text h3 {font-size: 35px;}
+	.workdetail-text p {max-width: 100%;}
+	footer {font-size: 45px;}
+	footer a {padding: 20px;}
+	.credit {font-size: 25px;}
 }
