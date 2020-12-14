@@ -318,6 +318,64 @@ nav {
 	}
 }
 
+/*---BACKTOTOP---*/
+
+#back-to-top-btn {
+	display: none;
+	position: fixed;
+	bottom: 35px;
+	right: 35px;
+	border: 0;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	background-color: #333;
+	opacity: 0.8;
+	font-size: 15px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 275ms ease;
+}
+
+#back-to-top-btn:hover {
+	background-color: #111;
+	transition: 275ms ease;
+}
+
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 0.8;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;  
+  animation-name: btnExit;
+}
+
+@keyframes btnExit {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
 /*---FOOTER---*/
 
 footer {
