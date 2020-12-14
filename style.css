@@ -219,7 +219,15 @@ nav {
 	width: 100%;
 }
 
+/*MEDIA QUERY*/
+
 @media screen and (max-width: 600px) {
+	.all2 {
+		width: 75%;
+	}
+	.all2 img {
+		margin-bottom: 40px;
+	}
 	.column {
 		flex: 100%;
 		max-width: 100%;
@@ -228,6 +236,9 @@ nav {
 	.row {
 		margin: 0;
 		padding: 0;
+	}
+	.row:last-of-type {
+		margin-bottom: 40px;
 	}
 }
 
