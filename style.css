@@ -83,7 +83,7 @@ nav {
 
 .nav-links a {
 	overflow: hidden;
-	background: linear-gradient(to right, #985854, #985854 50%, #333 50%);
+	background: linear-gradient(to right, #9c777e, #9c777e 50%, #333 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -126,7 +126,7 @@ nav {
 
 .intro-text b {
 	font-weight: 400;
-	color: #985854;
+	color: #b26762;
 }
 
 .intro-image {
@@ -159,7 +159,7 @@ nav {
 
 .introalt-text b {
 	font-weight: 400;
-	color: #985854;
+	color: #b26762;
 }
 
 .introalt-image {
@@ -273,7 +273,7 @@ nav {
 
 .workdetail-text b {
 	font-weight: 400;
-	color: #985854;
+	color: #b26762;
 }
 
 .workdetail-image {
