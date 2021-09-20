@@ -83,7 +83,7 @@ nav {
 
 .nav-links a {
 	overflow: hidden;
-	background: linear-gradient(to right, #fe938c, #fe938c 50%, #333 50%);
+	background: linear-gradient(to right, #985854, #985854 50%, #333 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
