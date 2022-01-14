@@ -144,7 +144,6 @@ nav {
 
 /*DRIBBLE BANNER*/
 .dbanner {
-	display: flex;
 	width: 75%;
 	margin: 10vh auto auto auto;
 	align-items: center;
