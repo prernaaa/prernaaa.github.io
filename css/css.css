@@ -275,7 +275,7 @@ footer {
     .container.about .button.prev:before {content: "";}
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
     .navbar {--bs-navbar-padding-x: 1rem; --bs-navbar-padding-y: 1rem;}
     .navbar-brand img {height: 2em;}
     .container {width: 100%;}
@@ -288,7 +288,7 @@ footer {
     .container.about img {display: none;}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
     .container.display {width: 75%; background-position: 100% 0%, 50% 80%;}
     .container.about .card img {object-fit: contain;}
 }
