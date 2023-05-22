@@ -188,7 +188,7 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
     width: 100%;
     height: 30em;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center 85%;
 }
 
 .aboutlinks {
@@ -286,7 +286,7 @@ footer {
     .container.work {margin-bottom: 1em; margin-top: -5em;}
     .container.work .card {margin-bottom: 5em;}
     .container.work .row {flex-direction: column-reverse;}
-    .container.about img {display: none;}
+    .container.about img {margin-top: 5em;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -301,4 +301,5 @@ footer {
     .container.display {background-position: 100% 0%, 50% 90%; margin-top: 12em;}
     #work {height:15em;}
     .container.about .card-title {font-size: 2em;}
+    .container.about .card img {height:40em; object-position: 70%;}
 }
