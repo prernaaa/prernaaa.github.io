@@ -186,8 +186,9 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 .container.about .card img {
     width: 100%;
-    height: 40em;
+    height: 30em;
     object-fit: cover;
+    object-position: center bottom;
 }
 
 .aboutlinks {
