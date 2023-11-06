@@ -239,6 +239,8 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 .container.playground .card img {width: 100%; height: 30em; object-fit: contain;}
 
+.container.playground .button {padding-bottom: 1em;}
+
 
 /* FOOTER */
 
