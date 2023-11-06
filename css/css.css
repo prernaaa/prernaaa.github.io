@@ -232,11 +232,12 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 /* PLAYGROUND */
 
-.playground .row {text-align: center; margin-bottom: 5em;}
+.playground .row {margin-bottom: 1em;}
+.playground .row:last-child {margin-bottom: 5em;}
 
-.playground .row img {max-width: 90%; display: block; margin: auto; border: 0.1em solid #eee}
+.container .subcategory {color: var(--primary-accent); padding: 0.5em; font-weight: bold;}
 
-.playground .card-title {margin: 3em 0 1em 0; text-align: center;}
+.container.playground .card img {width: 100%; height: 30em; object-fit: contain;}
 
 
 /* FOOTER */
