@@ -295,6 +295,8 @@ footer {
     .container.work .card {margin-bottom: 5em;}
     .container.work .row {flex-direction: column-reverse;}
     .container.about img {margin-top: 5em;}
+    .container.playground .row {flex-direction: column-reverse;}
+    .container.playground .row img {height: 20em;}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
