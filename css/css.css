@@ -294,6 +294,7 @@ footer {
     .container.work {margin-bottom: 1em; margin-top: -5em;}
     .container.work .card {margin-bottom: 5em;}
     .container.work .row {flex-direction: column-reverse;}
+    .project-banner img {height: 20em; object-fit: cover;}
     .container.about img {margin-top: 5em;}
     .container.playground .row {flex-direction: column-reverse;}
     .container.playground .row img {height: 20em;}
