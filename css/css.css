@@ -229,6 +229,9 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 .project-nav.first-nav {justify-content: flex-end;}
 
+.button.navbtn {border-bottom: none;}
+.button.navbtn:hover {border-bottom: none;}
+
 
 /* PLAYGROUND */
 
