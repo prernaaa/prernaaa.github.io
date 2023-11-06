@@ -212,6 +212,8 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 .container.project em {color: var(--primary-accent);}
 
+.container.project .view.button {padding-bottom: 1em;}
+
 .project-detail {margin: 5em 0;}
 
 .project-detail h3 {margin: 1em 0;}
