@@ -177,12 +177,12 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 .container.about {margin-bottom: 5em;}
 
-.about-title:before {
+/* .about-title:before {
     content: url(../images/diamondoutline.svg);
     width: 0.7em;
     display: inline-block;
     margin-right: 0.5em;
-}
+} */
 
 .container.about .card img {
     width: 100%;
