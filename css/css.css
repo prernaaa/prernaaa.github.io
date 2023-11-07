@@ -236,11 +236,12 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 
 
 /* PLAYGROUND */
+
 .playground {margin-bottom: 5em;}
 
 .playground .row {margin-bottom: 1em;}
 
-.container .subcategory {color: var(--primary-accent);}
+/* .container .subcategory {color: var(--primary-accent);} */
 
 .container.playground .card img {width: 100%; height: 30em; object-fit: contain;}
 
