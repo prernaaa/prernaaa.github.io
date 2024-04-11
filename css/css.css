@@ -205,6 +205,8 @@ small {font-size: 0.875em; letter-spacing: 0.05em;}
 .project-detail h3 {margin: 1em 0;}
 .project-detail .row img {max-width: 75%; display: block; margin: auto; padding-bottom: 1em;}
 
+.project-detail.references i {font-style: italic;}
+
 /* PROJECT NAV */
 
 .project-nav {
