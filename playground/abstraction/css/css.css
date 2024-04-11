@@ -1,0 +1,167 @@
+/* import font */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700;800&family=Karla:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* body and container */
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Karla', sans-serif;
+}
+
+div {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1em auto;
+    width: 65em;
+    gap: 3.5em;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+}
+
+/* page heading */
+
+header {
+    z-index: 1; /* move above content */
+    position: fixed; /* fix to top */
+    width: 100vw;
+    top: 0;
+    left: 0;
+    padding: 2.5em;
+    text-align: center;
+    background: white;
+    opacity: 0.95;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* HOME BTN */
+
+#home {
+    margin: 1em 2em;
+    font-size: 1.2em;
+    z-index: 100000;
+    position: fixed;
+}
+
+#home i {
+    color: #333333;
+    transition: 0.3s;
+}
+
+#home i:hover {
+    color: #333;
+    transition: 0.3s;
+}
+
+/* elements */
+
+section img {
+    width: 100%;
+}
+
+figcaption {
+    position: relative;
+    top: -2.5em;
+    width: 14em;
+    background: #ffffffdd;
+    text-align: center;
+    border: 0.05em solid black;
+    padding: 0.5em;
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 130%;
+
+}
+
+h2 {
+    display: none;
+}
+
+p {
+    font-weight: 300;
+    font-size: 0.9em;
+    align-self: center;
+    
+}
+
+em {
+    font-style: italic;
+}
+
+cite {
+    font-weight: 700;
+}
+
+/* section flexbox & styling */
+
+section {
+    display: flex;
+    gap: 7em;
+}
+
+section:first-of-type {
+    margin-top: 9em; /* allow room for header */
+}
+
+section:not(:first-of-type) {
+    border-top: dashed 0.05em black;
+    padding-top: 6em;
+}
+
+section figure {
+    flex-basis: 55%;
+}
+
+section p {
+    flex-basis: 45%;
+}
+
+/* even sections */
+
+section:nth-of-type(2n) {
+    text-align: right;
+}
+
+section:nth-of-type(2n) figure {
+    order: 2; /* move img + caption to right */
+}
+
+section:nth-of-type(2n) figcaption {
+    margin-left: auto;
+    right: 1em;
+}
+
+/* odd sections */
+
+section:nth-of-type(2n-1) h2, p {
+    order: 1; /* move text to right */
+}
+
+section:nth-of-type(2n-1) figcaption {
+    left: 1em;
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    margin: -1em 0 1em 0;
+    border-top: 0.05em solid black;
+    padding-top: 1em;
+}
+
+footer small {
+    font-size: 0.75em;
+    font-weight: 300;
+}

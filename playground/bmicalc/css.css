@@ -1,0 +1,227 @@
+/* BODY & CONTAINER */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@700&family=Judson:wght@400;700&display=swap');
+
+body {
+    background-color: #edede9f5;
+    font-family: 'Judson', serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    width: 80em;
+    margin: auto;
+    gap: 1em;
+}
+
+/* HOME BTN */
+
+#home {
+    margin: 1.2em;
+    font-size: 1.75em;
+}
+
+#home i {
+    color: #354f52;
+    transition: 0.3s;
+}
+
+#home i:hover {
+    color: #333;
+    transition: 0.3s;
+}
+
+/* HEADER */
+
+#title {
+    margin: -1em auto 5em auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/* CLASSIFICATION CHART */
+
+#resources {
+    width: 30em;
+}
+
+#resources p {
+    border-bottom: 0.1em solid #354f52;
+    padding-bottom: 1em;
+}
+
+#resources p:nth-last-of-type(2) {
+    border: none;
+    padding: 0;
+}
+
+#resources p span {
+    float: right;
+}
+
+#resources i {
+    font-style: normal;
+}
+
+/* FORM */
+
+form {
+    line-height: 2.5;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form button {
+    padding: 1em;
+    width: 13em;
+    margin-top: 2em;
+    background: #354f52;
+    border: none;
+    border-radius: 1em;
+    color: #edede9f5;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+form input {
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 0em 0.25em;
+}
+
+input::placeholder {
+    font-size: 0.8em;
+}
+
+form button:hover {
+    background: #2f3e46;
+}
+
+form button:active {
+    background: #333;
+}
+
+form span {
+    letter-spacing: 0.025em;
+    text-transform: lowercase;
+    color: darkred !important;
+    font-style: normal;
+    padding: 0em 0.25em;
+}
+
+/* BMI OUTPUT */
+
+#bmi {
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #edede9f5;
+    display: block;
+    background-color: #354f52;
+    padding: 1em;
+    border-radius: 1em;
+    width: 92%;
+}
+
+/* HIGHLIGHTS */
+
+.highlightgreen {
+    background-color: #cad2c5;
+}
+
+.highlightyellow {
+    background-color: #f6dda3;
+}
+
+.highlightred {
+    background-color: #e4b6b6;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin: auto;
+    margin-top: 6em;
+}
+
+footer a {
+    color: #354f52;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+/* JQUERY UI TABS OVERWRITE */
+
+.ui-tabs {
+    margin: auto !important;
+    width: 30em !important;
+    padding: 1em !important;
+    border: none !important;
+    border-radius: 1em !important;
+    background: #cad2c5 !important;
+    text-transform: lowercase !important;
+    text-align: center !important;
+    font-family: 'Judson', serif !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+    border: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border: none !important;
+    border-radius: 1em !important;
+    letter-spacing: 0.025em !important;
+    padding: 0.25em !important;
+    margin-right: 1em !important;
+    margin-top: 1.5em !important;
+    float: none !important;
+    display: inline-block !important;
+}
+
+.ui-tabs .ui-tabs-active {
+    background-color: #354f52 !important;
+    color: #edede9f5 !important;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding-left: 0 !important;
+}
+
+/* JQUERY UI TOOLTIP OVERWRITE */
+
+.ui-tooltip {
+	padding: 1em !important;
+    padding-left: 2.5em !important;
+	max-width: 20em !important;
+	box-shadow: none !important;
+    border-radius: 1em !important;
+    border: none !important;
+    background-color: #cad2c5 !important;
+    font-family: inherit !important;
+}
+
+.ui-tooltip::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: '\f05a';
+    position: absolute;
+    left: 1em;
+    color: #354f52;
+}
