@@ -1,0 +1,471 @@
+/* FONTS & COLOURS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+
+@font-face {
+    font-family: 'Cirka';
+    src: url('../fonts/Cirka-Light.otf') format('opentype'),
+        url('../fonts/Cirka-Variable.ttf') format('truetype');
+}
+
+:root {
+    --text: #333333;
+    --black: #333333;
+    --dark-grey: #D0CCD0;
+    --grey: #F5F4F5;
+    --light-grey: #FAF9FA;
+    --primary-accent: #8A64AB;
+    --primary-tint: #d0c1dd;
+    --secondary-accent: #C2714F;
+    --secondary-tint: #e1b8a7;
+    --tertiary-accent: #5F634F;
+    --background: #FAF9FA;
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes slideL {
+    0% {opacity: 0.9; transform: translateX(-30px);}
+    100% {opacity: 1;transform: translateX(0);}
+}
+
+@keyframes slideR {
+    0% {opacity: 0.9;transform: translateX(30px);}
+    100% {opacity: 1;transform: translateX(0);}
+}
+
+@keyframes slideD {
+    0% {opacity: 0.9;transform: translateY(30px);}
+    100% {opacity: 1;transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sticky-top {
+      top: 2em;
+    }
+} */
+
+
+
+/* BODY */
+
+body {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 200%;
+    background: var(--background);
+}
+
+::selection {
+    background: var(--primary-tint);
+}
+
+::-moz-selection {
+    background: var(--primary-tint);
+}
+
+
+
+/* TAG STYLING */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cirka', serif;
+}
+
+a {
+    color: var(--black);
+    text-decoration-style: solid;
+}
+
+a:hover {color: var(--primary-accent);}
+
+em {
+    font-weight: 500;
+    color: var(--primary-accent)
+}
+
+i {font-style: italic;}
+
+
+
+/* BUTTONS */
+
+.button {
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {color: var(--primary-accent);}
+
+.button:after {content: " →";}
+
+.button.prev:after {content: "";}
+
+.button.prev:before {content: "← ";}
+
+
+
+/* NAVBAR */
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: var(--grey) !important;
+}
+
+.navbar {
+    letter-spacing: 0.025em;
+    margin: 2em 4em 5em 4em;
+    border-radius: 5em;
+    border: 0.1em solid var(--dark-grey);
+    padding: 0.5em 2em;
+}
+
+.navbar-brand img {
+    height: 1em;
+    align-items: center;
+}
+
+.navbar-nav {
+    font-family: 'Cirka', serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    --bs-nav-link-color: var(--black);
+    --bs-nav-link-hover-color: var(--primary-accent);
+}
+
+.navbar-nav>li:not(:last-of-type) {
+    margin-right: 2.5em;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+
+
+
+/* HOMEPAGE INTRO HERO DISPLAY */
+
+.display {
+    margin: 15em auto;
+    animation: fadeIn 2s ease;
+}
+
+.container.display h1 {
+    font-size: 3em;
+}
+.container.display img {
+    animation: slideL 2s ease;
+}
+
+.container.display .introText {
+    animation: slideR 2s ease;
+}
+
+/* .herosocials {
+    background-color: var(--grey);
+    padding: 2em 0.75em;
+    width: fit-content;
+    margin: auto;
+    border-radius: 1.5em;
+    border: 0.1em solid var(--dark-grey);
+}
+
+.herosocials a {
+    font-size: 1.2em;
+    line-height: 300%;
+} */
+
+
+
+/* FEATURED WORK */
+
+.featuredwork .card {
+    width: 75%;
+    margin: 2em auto;
+    background-color: var(--light-grey);
+    border: none;
+    padding: 0;
+}
+
+.featuredwork .card img {
+    border-radius: 1em;
+    width: 100%;
+}
+
+.featuredwork .card-title {
+    font-size: 2em;
+}
+
+.featuredwork .card-subtitle {
+    opacity: 0.7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+
+
+/* ABOUT PG CONTAINER */
+
+.about {
+    margin: 12em auto;
+}
+
+.about a:hover {
+    text-decoration-style: wavy;
+}
+
+
+
+/* WORK/PLAY CATEGORY TITLES */
+
+.categorytitle {
+    margin: 4em 0;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.categorytitle h1 span {
+    background-color: var(--background);
+    padding-right: 0.5em;
+}
+
+.categorytitle h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 0.025em solid var(--dark-grey);
+    z-index: -1;
+}
+
+.miscgrid {
+    margin: auto;
+    width: 90%;
+}
+
+
+
+/* CASE STUDIES CONTAINER & HEADER */
+
+.container.casestudy {max-width: 90%;}
+
+.casestudy small {
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-accent);
+    font-weight: bold;
+}
+
+.studyheader img {
+    width: 100%;
+    border-radius: 1em;
+    margin: 4em 0;
+}
+
+
+
+/* CASE STUDY NAV NAV */
+
+.project-nav {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.project-nav.first-nav {
+    justify-content: flex-end;
+}
+
+
+
+/* CASE STUDY CONTENT */
+
+.studysection a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.studysection {
+    width: 75%;
+    margin: auto;
+}
+
+.studysection:not(:last-of-type) {
+    margin-bottom: 6em;
+}
+
+.studysection img {
+    width: 100%;
+    border-radius: 1em;
+    margin-top: 2em;
+}
+
+.studysection img:not(:last-of-type) {
+    margin-bottom: 2em;
+}
+
+
+
+/* CASE STUDY SPECIFIC STYLING */
+
+.chroniclegif img {
+    width: 75%;
+    float: right;
+}
+
+.smc h3 {
+    margin: 2em 0 1em 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: var(--primary-accent);
+}
+
+.smc h4 {
+    margin: 1em 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.smc h4::before {
+    content: "-> "
+}
+
+
+
+/* FOOTER */
+
+footer {
+    margin: 4em 0 2em 0;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Cirka', serif;
+}
+
+.social {
+    margin-bottom: 1em;
+}
+
+.altFooter {
+    text-align: right
+}
+
+.social a:not(:last-of-type) {
+    margin-right: 1em;
+}
+
+.copy {
+    margin: 1em 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.5em;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 575.99px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        margin: 0 0 5em 0;
+        border-radius: 2em;
+    }
+
+    /* HOMEPAGE HERO DISPLAY */
+
+    .display {
+        margin: 5em auto;
+    }
+
+    /* WORK/PLAY CATEGORY HEADINGS */
+
+    .categorytitle {
+        margin: 4em 2.5em;
+        position: relative;
+        text-transform: capitalize;
+    }
+
+    /* ABOUT PAGE */
+
+    .about {
+        padding: 0 3em;
+    }
+
+    .about img {
+        margin-top: 5em;
+    }
+
+    .altFooter .social {
+        margin: 0;
+        text-align: left;
+    }
+
+    /* CASE STUDIES */
+
+    .container.display .introText {
+        animation: slideD 2s ease;
+    }
+
+    .chroniclegif img {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        width: 90%;
+        margin: 4em auto;
+    }
+
+    /* HOMEPAGE HERO DISPLAY */
+
+    .display {
+        margin: 10em auto;
+    }
+
+    /* ABOUT */
+
+    .about {
+        margin: 5em auto;
+    }
+
+    /* CASE STUDY */
+
+    .studysection {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.99px) {}
+
+@media screen and (min-width: 1200px) {}
