@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="author" content="Prerna Awasthi">
+  <title>bmi calculator – pawasth1</title>
+
+  <link rel="stylesheet" type="text/css" href="css.css">
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <!-- jquery validation -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+  <!-- jqueryui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <!-- bmi calc -->
+  <script src ="https://it411ajaxbmi8c2e.blob.core.windows.net/it411/BMICalcHelper.js"></script>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/ea8a2f7067.js" crossorigin="anonymous"></script>
+
+  <script>
+
+    "use strict";
+
+    $(document).ready(function() {
+
+      // set up jquery ui for imperial/metric tabs
+      $("#tabs").tabs({activate(event, ui) {
+            $("#calcImperial").validate().resetForm(); // reset error messages imperial
+            $("#calcMetric").validate().resetForm(); // reset error messages metric
+            $('input').val(''); // reset input fields
+            $("#bmi").empty().append(`your bmi is: 00.0`); // reset main bmi output
+            $("#resources i").removeClass(); // reset highlights
+            $("#bmi").prop('title', ''); // reset tooltip
+      }});
+        
+      // set up jquery ui tooltip
+      $("#bmi").tooltip({position:{my: "right bottom+70",at: "right bottom"}});
+
+      // custom jquery validator error messages
+      jQuery.extend(jQuery.validator.messages, {required: "required", number: "please enter a number"});
+
+      // set up validator for both forms
+      $("#calcImperial").validate({errorElement: "span",});
+      $("#calcMetric").validate({errorElement: "span"});
+
+      // IMPERIAL FORM
+      $("#calcImperial").submit(function(e) {
+
+        e.preventDefault();
+
+        // store user inputs
+        var feet = Number($("#feet").val());
+        var inches = Number($("#inches").val());
+        var weight = Number($("#weight").val());
+
+        // calculate bmi
+        var bmi = calcImperialBMIFeetAndInches(feet, inches, weight).toFixed(1);
+
+        // check validity + output results
+        if ($("#calcImperial").valid()) {
+          
+          $("#bmi").empty().append(`your bmi is: ${bmi}`); 
+          $("#resources i").removeClass(); // reset highlights
+
+          // bmi classification
+          if (bmi <18.5) {
+            $("#bmi").prop('title', 'this puts you in the underweight category'); // #bmi hover tooltip text
+            $("#under").toggleClass("highlightyellow"); // highlight classification
+          } 
+          
+          else if (bmi >= 18.5 && bmi <=24.9) {
+            $("#bmi").prop('title', 'this puts you in the normal category');
+            $("#normal").toggleClass("highlightgreen");
+          } 
+          
+          else if (bmi >= 25.0 && bmi <=29.9) {
+            $("#bmi").prop('title', 'this puts you in the overweight category');
+            $("#over").toggleClass("highlightyellow");
+          } 
+          
+          else if (bmi >= 30.0) {
+            $("#bmi").prop('title', 'this puts you in the obese category');
+            $("#obese").toggleClass("highlightred");
+          }
+        };
+      });
+
+      // METRIC FORM
+      $("#calcMetric").submit(function(e) {
+
+        e.preventDefault();
+        $("#resources i").removeClass(); // reset highlights
+
+        // store user inputs
+        var cm = Number($("#cm").val());
+        var mm = Number($("#mm").val());
+        var weightkg = Number($("#weightkg").val());
+
+        // calculate bmi
+        var bmi2 = calcMetricBMICMandMM(cm, mm, weightkg).toFixed(1);
+
+        // check validity + output results
+        if ($("#calcMetric").valid()) {
+          
+          $("#bmi").empty().append(`your bmi is: ${bmi2}`);
+
+          // bmi classification
+          if (bmi2 <18.5) {
+            $("#bmi").prop('title', 'this puts you in the underweight category'); // #bmi hover tooltip text
+            $("#under").toggleClass("highlightyellow"); // highlight classification
+          } 
+
+          else if (bmi2 >= 18.5 && bmi2 <=24.9) {
+            $("#bmi").prop('title', 'this puts you in the normal category');
+            $("#normal").toggleClass("highlightgreen");
+          } 
+          
+          else if (bmi2 >= 25.0 && bmi2 <=29.9) {
+            $("#bmi").prop('title', 'this puts you in the overweight category');
+            $("#over").toggleClass("highlightyellow");
+          } 
+          
+          else if (bmi2 >= 30.0) {
+            $("#bmi").prop('title', 'this puts you in the obese category');
+            $("#obese").toggleClass("highlightred");
+          }
+        };
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- back to home page -->
+  <div id="home"><a href="../index.html"><i class="fa-solid fa-circle-chevron-left"></i></a></div>
+
+  <!-- header -->
+  <header id="title">
+    <h1>bmi calculator</h1>
+    <p>body mass index (bmi) is a measure of body fat based on height and weight that applies to adult men and women. use the tool below to compute yours.</p>
+  </header>
+
+  <!-- main contents -->
+  <div id="container">
+
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Imperial</a></li>
+        <li><a href="#tabs-2">Metric</a></li>
+      </ul>
+
+      <!-- imperial form -->
+      <div id="tabs-1">
+        
+        <form action="part1.html" id="calcImperial">
+
+          <!-- height -->
+          <label for="feet">please enter your height in feet</label><br>
+          <input type="text" name="feet" id="feet" placeholder="ft" class="required number">
+          <input type="text" name="inches" id="inches" placeholder="in" class="required number">
+
+          <br>
+
+          <!-- weight -->
+          <label for="weight">please enter your weight in lbs</label><br>
+          <input type="text" name="weight" id="weight" placeholder="lbs" class="required number">
+
+          <br>
+
+          <!-- submit -->
+          <button id="submit" type="submit">submit</button>
+
+        </form>
+
+      </div>
+      
+      <!-- metric form -->
+      <div id="tabs-2">
+
+        <form action="part1.html" id="calcMetric">
+
+          <!-- height -->
+          <label for="cm">please enter your height in cm</label><br>
+          <input type="text" name="cm" id="cm" placeholder="cm" class="required number">
+          <input type="text" name="mm" id="mm" placeholder="mm" class="required number">
+
+          <br>
+
+          <!-- weight -->
+          <label for="weightkg">please enter your weight in kgs</label><br>
+          <input type="text" name="weightkg" id="weightkg" placeholder="kg" class="required number">
+
+          <br>
+
+          <!-- submit -->
+          <button id="submit2" type="submit">submit</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- sidebar with chart -->
+    <div id="resources">
+
+      <h2>classification</h2>
+
+      <p><i id="under">underweight</i> <span>under 18.5</span></p>
+      <p><i id="normal">normal weight</i> <span>18.5 to 24.9</span></p>
+      <p><i id="over">overweight</i> <span>25 to 29.9</span></p>
+      <p><i id="obese">obesity</i> <span>30 or over</span></p>
+
+      <br>
+
+      <!-- form output -->
+      <p id="bmi" title="">your bmi is: 00.0</p>
+
+    </div>
+  
+  </div>
+
+  <footer>
+    <p>visit <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html">cdc.gov</a> for more information</p>
+  </footer>
+
+</body>
+</html>
