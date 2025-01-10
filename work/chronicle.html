@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Chronicle / Prerna Awasthi</title>
+    <link rel="icon" type="image/x-icon" href="../images/diamondfav.svg">
+
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Prerna Awasthi">
+    <meta name="description" content="Prerna Awasthi Portfolio">
+    <meta name="keywords" content="UI, UX, UI/UX, Designer, Chicago">
+
+    <!-- LINKED FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ea8a2f7067.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION HEADER -->
+
+    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top" id="#">
+
+        <div class="container-fluid">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="../" aria-current="page"><img src="../images/logo.svg"
+                    alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- LINKS -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../playground/">play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../PrernaAwasthiResume.pdf" target="_blank">resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- CASE STUDY -->
+
+    <div class="container casestudy">
+
+        <!-- PROJECT NAVIGATION -->
+
+        <div class="project-nav first-nav sticky-top2">
+            <!-- <a href="/" class="button prev" title="previous study">previous study</a> -->
+            <a href="rria" class="button" title="next study">web ia redesign</a>
+        </div>
+
+        <!-- PROJECT HEADER -->
+
+        <div class="studyheader">
+            <small>Chronicle</small>
+            <h1>Creating a seamless social experience for logging books, movies, and TV.</h1>
+            <p class="text-muted">UX Design / 2024 / DePaul HCI 553</p>
+
+            <img src="../images/chronicle.png" alt="Chronicle App Screens">
+        </div>
+
+
+
+        <!-- SECTION 1 -->
+
+        <div class="studysection">
+            <small>Introduction</small>
+
+            <h2>Why Chronicle?</h2>
+
+            <h3>Existing social tracking apps apps can be too media-specific, restrict discussion, and often do not
+                balance community and tracking features equally.</h3>
+
+            <img src="images/chronicle/existingapps.png" alt="Collage of screenshots of several social tracking apps"
+                style="margin: 2em 0;">
+
+
+            <p>While doing a deep dive on existing social tracking apps for HCI 553, I discovered that most tools:</p>
+
+            <ul style="list-style: decimal;">
+                <li>
+                    Cater to <b>specific niches</b> (i.e. only movies; movies and TV; only TV; TV and books; only books;
+                    specifically only anime and manga).
+                </li>
+                <li>
+                    Often gate discussions to <b>specific chapters or episodes</b>; one alternative is Reddit threads,
+                    but those can be outdated or hard to find.
+                </li>
+                <li>
+                    Place <b>unequal emphasis on "social" vs "tracking" aspects</b>. While they may have some community
+                    features, they're greatly overshadowed by the tracking features, or vice versa.
+                </li>
+            </ul>
+
+            <p>This is where Chronicle comes in! I sought to create a streamlined application that consolidates as many
+                forms of media as possible, while still emphasising community.</p>
+        </div>
+
+        <!-- SECTION 2 -->
+
+        <div class="studysection">
+            <small>Ideating and User Testing</small>
+
+            <h2>Creating and refining key features.</h2>
+
+            <p>I created low-fidelity wireframes based on a contextual inquiry. I then conducted a round of user
+                interviews to understand what users liked so far, and what could be improved upon. The main findings and
+                changes are shown below.</p>
+
+            <h3>Confusing progress section for media pages.</h3>
+
+            <div class="row">
+                <div class="col mb-5">
+                    <img src="images/chronicle/mediawire.png" alt="Initial lo-fi wireframe for the Media Detail page">
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/mediamid.png" alt="Updated mid-fi wireframe for the Media Detail page">
+                </div>
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <ul>
+                        <li>✽ Aggregate of users' own reviews</li>
+                        <li>✽ Clicking any chapter opens a thread with both self and community threads</li>
+                        <li>✽ Additional media statistics/information, including custom user-added tags</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Personalisation for shelf displays.</h3>
+
+            <div class="row">
+                <div class="col mb-5">
+                    <img src="images/chronicle/trackwire.png" alt="Initial lo-fi wireframe for the Shelf page">
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/trackmid.png" alt="Updated mid-fi wireframe for the Shelf page">
+                </div>
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <ul>
+                        <li>✽ Implement sorting and filtering</li>
+                        <li>✽ Include default tabs to provide an organisational foundation and to help support
+                            pre-release discussions for upcoming content</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>More profile decoration and customisation options.</h3>
+
+            <div class="row">
+                <div class="col mb-5">
+                    <img src="images/chronicle/profilewire.png" alt="Initial lo-fi wireframe for the Profile page">
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/profilemid.png" alt="Updated mid-fi wireframe for the Profile page">
+                </div>
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <ul>
+                        <li>✽ Allow users to link external social media accounts</li>
+                        <li>✽ Display recent user activity</li>
+                        <li>✽ Allow users to reorder sections, and to toggle them on and off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+
+        <div class="studysection">
+            <small>Iterating and Prototyping</small>
+
+            <h2>The final product.</h2>
+
+            <p>I did another round of testing before creating the following high-fidelity prototype.</p>
+
+            <div class="row chroniclegif">
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <h3>Meet Chronicle.</h3>
+                    <p>The onboarding is brief and requires a minimal amount of information from users; just enough to
+                        keep their accounts secure and enable public forum participation.</p>
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/onboard.gif" alt="A GIF of the onboarding sequence">
+                </div>
+            </div>
+
+            <div class="row chroniclegif">
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <h3>Grow your community.</h3>
+                    <p>Users will be able to engage in public conversations by viewing and making posts, even outside of
+                        specific media pages.</p>
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/community.gif" alt="A GIF showing the home Feed and Groups">
+                </div>
+            </div>
+
+            <div class="row chroniclegif">
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <h3>Stay organised and up-to-date.</h3>
+                    <p>Users will be able to collect and save media, search for content, and be provided with
+                        recommendations for each type of media based on previously logged/collected content, as well as
+                        trending and popular media </p>
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/organise.gif" alt="A gif of the Shelf and Search pages">
+                </div>
+            </div>
+
+            <div class="row chroniclegif">
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <h3>Track your media precisely.</h3>
+                    <p>Media detail pages will highlight users’ upcoming chapters/episodes and community reviews. Users
+                        will be able to add emotions, tags, and their own reviews/comments and images when logging
+                        content.</p>
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/logging.gif" alt="A GIF of the Media Detail pages">
+                </div>
+            </div>
+
+            <div class="row chroniclegif">
+                <div class="col-xs-1 col-sm mb-5 align-self-center">
+                    <h3>Personalise your profile.</h3>
+                    <p>Users will be able to customise their profile to their liking by choosing which sections to show
+                        or hide.</p>
+                </div>
+                <div class="col mb-5">
+                    <img src="images/chronicle/profile.gif" alt="A GIF of a user Profile and settings">
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5 -->
+
+        <div class="studysection">
+            <small>Retrospective</small>
+
+            <h2>What did I learn?</h2>
+
+            <p>✽ It's important to let users have opportunities for personalisation and allow them to adequately
+                customise their experience with your product!</p>
+
+            <h2>What's next?</h2>
+
+            <p>✽ This project was primarily focused on incorporating various social features into an application, and as
+                such, was realtively light on the research; conducting more usability tests, especially for the IA would
+                be beneficial for better exploring any successes and failures.</p>
+            <p>✽ Since I wanted to make something that would simplify the existing process for its users, I would also
+                love to try a diary study at some point.</p>
+        </div>
+
+
+
+        <!-- PROJECT NAVIGATION -->
+
+        <div class="project-nav first-nav">
+            <!-- <a href="/" class="button prev" title="previous study">previous study</a> -->
+            <a href="rria" class="button" title="next study">web ia redesign</a>
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/prerna-awasthi/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in fa-sm"></i></a>
+            <a href="https://dribbble.com/prernaawasthi" target="_blank"><i class="fa-brands fa-dribbble fa-sm"></i></a>
+            <a href="https://www.pinterest.com/prernapng/_saved/" target="_blank"><i
+                    class="fa-brands fa-pinterest fa-sm"></i></a>
+        </div>
+
+        <p>prerna.awasthi@gmail.com</p>
+
+        <div class="copy">
+            made with &lt;3
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
