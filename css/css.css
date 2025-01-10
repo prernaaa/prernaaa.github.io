@@ -112,6 +112,8 @@ i {font-style: italic;}
 
 .button.prev:before {content: "← ";}
 
+.button.stretched-link:after {content: ""}
+
 
 
 /* NAVBAR */
